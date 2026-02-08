@@ -8416,7 +8416,7 @@ header.main-header.header-metal .header-sticky.active{
 
 .what-we-body-image-metal,
 .what-we-item-box-metal{
-    width: calc(50% - 10px);
+    width: 100%;
 }
 
 .what-we-item-metal{
@@ -10775,9 +10775,14 @@ header.main-header.header-stone .header-sticky.active{
 }
 
 .how-work-step-item-stone{
-	width: calc(25% - 22.5px);
+	width: calc(50% - 15px);
 	display: flex;
 	flex-direction: column;
+}
+
+.how-work-step-item-stone:nth-child(3){
+	width: calc(100% - 15px);
+	margin: 0 auto;
 }
 
 .how-work-step-item-no{
