@@ -1,6 +1,6 @@
 /* ----------------------------------------------------------------------------------------
 * Author        : Awaiken
-* Template Name : Linex - Textile & Fabric Manufacturing HTML Template
+* Template Name : Linex - Textile & Fabric Manufacturing HTML Template image-anime
 * File          : CSS File
 * Version       : 1.0
 * ---------------------------------------------------------------------------------------- */
@@ -588,8 +588,10 @@ header.main-header .header-sticky.active{
 }
 
 .main-menu ul li.submenu > a:after{
-	content: '▼';
-	font-size: 10px;
+	content: '\f107';
+	font-family: 'FontAwesome';
+	font-weight: 900;
+	font-size: 14px;
 	margin-left: 8px;
 }
 
@@ -634,8 +636,7 @@ header.main-header .header-sticky.active{
 }
 
 .main-menu ul li.submenu ul li.submenu > a:after{
-    content: '▼';
-    font-size: 10px;
+    content: '\f105';
     float: right;
 }
 
@@ -1051,7 +1052,7 @@ header.main-header .header-sticky.active{
 	}
 
 	to{
-		transform: translateX(calc(-100% - var(--gap) - 100px));
+		transform: translateX(calc(-100% - var(--gap)));
 	}
 }
 
@@ -8416,7 +8417,7 @@ header.main-header.header-metal .header-sticky.active{
 
 .what-we-body-image-metal,
 .what-we-item-box-metal{
-    width: 100%;
+    width: calc(50% - 10px);
 }
 
 .what-we-item-metal{
@@ -10526,9 +10527,6 @@ header.main-header.header-stone .header-sticky.active{
     margin-bottom: 30px;
     padding: 30px;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .service-item-stone:before{
@@ -10778,14 +10776,9 @@ header.main-header.header-stone .header-sticky.active{
 }
 
 .how-work-step-item-stone{
-	width: calc(50% - 15px);
+	width: calc(25% - 22.5px);
 	display: flex;
 	flex-direction: column;
-}
-
-.how-work-step-item-stone:nth-child(3){
-	width: calc(100% - 15px);
-	margin: 0 auto;
 }
 
 .how-work-step-item-no{
@@ -10901,19 +10894,16 @@ header.main-header.header-stone .header-sticky.active{
 	backdrop-filter: blur(20px) saturate(100%);
     -webkit-backdrop-filter: blur(20px) saturate(100%);
 	padding: 40px;
+	margin-bottom: -100px;
 	border-radius: 10px 10px 0 0;
-}
-
-.advantage-content-stone .section-title:last-of-type{
-	position: relative;
 }
 
 .advantage-item-stone{
 	display: flex;
-	flex-direction: column;
 	flex-wrap: wrap;
 	gap: 20px;
 	border-bottom: 1px solid var(--dark-divider-color);
+	margin-bottom: 40px;
 	padding-bottom: 40px;
 }
 
@@ -11163,8 +11153,6 @@ header.main-header.header-stone .header-sticky.active{
 .what-we-image-stone figure img{
 	height: 100%;
 	width: 100%;
-	aspect-ratio: 1 / 0.79;
-	object-fit: cover;
 	border-radius: 10px;
 }
 
