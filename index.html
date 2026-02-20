@@ -42,9 +42,45 @@
     </div>
 
     <!-- Header -->
-    <div id="header"></div>
+    <header class="main-header">
+        <div class="header-sticky bg-section">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <!-- Logo Start -->
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logo.svg" alt="Logo">
+                    </a>
+                    <!-- Logo End -->
 
-    <!-- Hero Section -->
+                    <!-- Main Menu Start -->
+                    <div class="collapse navbar-collapse main-menu">
+                        <div class="nav-menu-wrapper">
+                            <ul class="navbar-nav mr-auto" id="menu">
+                                <li class="nav-item"><a class="nav-link" href="brand_services_index.html">Brand
+                                        Services</a>
+                                <li class="nav-item"><a class="nav-link" href="products.html">Products</a>
+                                <li class="nav-item"><a class="nav-link" href="how_it_works.html">How It Works</a></li>
+                                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                <li class="mobile-menu-btn"><a href="corporate_sales_index.html" class="btn-default btn-highlighted">Corporate Sales</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Header Btn Start -->
+                        <div class="header-btn">
+                            <a href="corporate_sales_index.html" class="btn-default btn-highlighted border border-2">Corporate Sales</a>
+                        </div>
+                        <!-- Header Btn End -->
+                    </div>
+                    <!-- Main Menu End -->
+                    <div class="navbar-toggle"></div>
+                </div>
+            </nav>
+            <div class="responsive-menu"></div>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section -->
     <div class="hero bg-section dark-section parallaxie">
         <div class="container">
             <div class="row align-items-end">
@@ -136,7 +172,7 @@
         </div>
     </div>
 
-    <!-- Service Showcase Scroll Ticker -->
+    <!-- 2. Service Showcase Scroll Ticker -->
     <div class="scrolling-ticker bg-section">
         <!-- Scrolling Ticker Box -->
         <div class="scrolling-ticker-box">
@@ -173,7 +209,7 @@
         </div>
     </div>
 
-    <!-- PORTAL SPLIT SECTION -->
+    <!-- 3. Who We Serve -->
     <!-- Our Features Section(H1) -->
     <div class="our-features">
         <div class="container">
@@ -250,7 +286,7 @@
         </div>
     </div>
 
-    <!-- PROBLEM STATEMENT BLOCK-->
+    <!-- 4. The Problem-->
     <!-- Our Advantages Section(H3) -->
     <div class="our-advantages-stone bg-section dark-section parallaxie">
         <div class="container">
@@ -318,7 +354,7 @@
         </div>
     </div>
 
-    <!-- THE TEXMORRO DIFFERENCE-->
+    <!-- 5. How Texmorro Helps-->
     <!-- Our Testimonial Section(H3) -->
     <div class="our-testimonial-stone">
         <div class="container">
@@ -363,13 +399,14 @@
 
                                     <!-- Testimonial Item Author Start -->
                                     <div class="testimonial-item-author-stone">
-                                        <div class="testimonial-author-content-stone">
-                                            <h3>Instead of pushing big orders, we help you:<br><br>
-                                                Start small<br>
-                                                See exactly what you’ll get<br>
-                                                Grow without changing partners<br><br>
-                                                No guesswork. No pressure.
-                                            </h3>
+                                        <div class="testimonial-author-content-stone ">
+                                            <h3>Instead of pushing big orders, we help you:<br></h3>
+                                            <ul class="mt-2">
+                                                <li>Start with a sample</li>
+                                                <li>See exactly what you’ll get</li>
+                                                <li>Grow without changing partners</li>
+                                            </ul>
+                                            <h3>No guesswork. No pressure.</h3>
                                         </div>
                                     </div>
                                     <!-- Testimonial Item Author End -->
@@ -383,7 +420,7 @@
         </div>
     </div>
 
-    <!-- THE TEXMORRO TOMORROW MODEL -->
+    <!-- 6. What Makes us Different -->
     <!-- Our Services Section(H3) -->
     <div class="our-services-stone bg-section dark-section">
         <div class="container">
@@ -503,7 +540,9 @@
         </div>
     </div>
 
-    <!-- WHO WE WORK WITH -->
+    <!-- 7. PRODUCTS WE WORK WITH -->
+
+    <!-- 8. WHO WE WORK WITH -->
     <!-- How It Work Section Start -->
     <div class="how-it-work-stone">
         <div class="container">
@@ -522,7 +561,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <!-- How It Work Step List Start -->
-                    <div class="how-it-work-step-list-stone">
+                    <div class="how-it-work-step-list-stone d-lg-flex justify-content-lg-center">
                         <!-- How Work Step Item Start -->
                         <div class="how-work-step-item-stone wow fadeInUp">
                             <div class="how-work-step-item-body">
@@ -538,7 +577,7 @@
                         <!-- How Work Step Item End -->
 
                         <!-- How Work Step Item Start -->
-                        <div class="how-work-step-item-stone wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="how-work-step-item-stone wow fadeInUp">
                             <div class="how-work-step-item-body">
                                 <div class="how-work-step-item-content">
                                     <h3>Growing Brands & F-Commerce Sellers</h3>
@@ -552,7 +591,7 @@
                         <!-- How Work Step Item End -->
 
                         <!-- How Work Step Item Start -->
-                        <div class="how-work-step-item-stone wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="how-work-step-item-stone wow fadeInUp">
                             <div class="how-work-step-item-body">
                                 <div class="how-work-step-item-content">
                                     <h3>Corporates & Institutions</h3>
@@ -572,7 +611,8 @@
                 <div class="col-lg-12">
                     <!-- Section Footer Text Start -->
                     <div class="section-footer-text wow fadeInUp" data-wow-delay="0.4s">
-                        <p>If you’re serious about <span>quality</span>, we’re built for you. <a href="contact.html">See how our
+                        <p>If you’re serious about <span>quality</span>, we’re built for you. <a href="contact.html">See
+                                how our
                                 services bring designs to life.</a></p>
                     </div>
                     <!-- Section Footer Text End -->
@@ -581,109 +621,7 @@
         </div>
     </div>
 
-    <!-- PROOF, NOT PROMISES -->
-    <!-- What We Do Section -->
-    <div class="what-we-do bg-section dark-section">
-        <div class="container-fluid">
-            <div class="row no-gutters">
-                <div class="col-lg-12">
-                    <!-- What We Do Box -->
-                    <div class="what-we-do-box">
-                        <!-- What We Do Image -->
-                        <div class="what-we-do-image">
-                            <figure class="image-anime">
-                                <img src="images/what-we-do-image.jpg" alt="">
-                            </figure>
-                        </div>
-
-                        <!-- What We Do Content -->
-                        <div class="what-we-do-content">
-                            <!-- Section Title -->
-                            <div class="section-title">
-                                <h3 class="wow fadeInUp">Trust & Quality</h3>
-                                <h2 class="text-anime-style-3" data-cursor="-opaque">PROOF, Not Promises</h2>
-                                <p class="wow fadeInUp" data-wow-delay="0.2s">Chosen for quality. Trusted for consistency and integrity in everything we make.</p>
-                            </div>
-
-                            <!-- What We Body -->
-                            <div class="what-we-body wow fadeInUp" data-wow-delay="0.4s">
-                                <!-- What We Body Item -->
-                                <div class="what-we-body-item">
-                                    <div class="what-we-body-item-content">
-                                        <h3>Sample-to-Bulk quality consistency</h3>
-                                    </div>
-                                </div>
-
-                                <!-- What We Body Item -->
-                                <div class="what-we-body-item">
-                                    <div class="what-we-body-item-content">
-                                        <h3>Trusted partner factories</h3>
-                                    </div>
-                                </div>
-                                <!-- What We Body Item -->
-                                <div class="what-we-body-item">
-                                    <div class="what-we-body-item-content">
-                                        <h3>Ethical and responsible production</h3>
-                                    </div>
-                                </div>
-                                <!-- What We Body Item -->
-                                <div class="what-we-body-item">
-                                    <div class="what-we-body-item-content">
-                                        <h3>Clear communication at every step</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- What We Body End -->
-
-                            <!-- What We Counters List Start -->
-                            <div class="what-we-counters-list wow fadeInUp">
-                                <!-- What We Counter Item Start -->
-                                <div class="what-we-counter-item">
-                                    <div class="icon-box">
-                                        <img src="images/icon-what-we-counter-1.svg" alt="">
-                                    </div>
-                                    <div class="what-we-counter-item-content">
-                                        <h2>5+</h2>
-                                        <p>Years Of Excellence</p>
-                                    </div>
-                                </div>
-                                <!-- What We Counter Item End -->
-
-                                <!-- What We Counter Item Start -->
-                                <div class="what-we-counter-item">
-                                    <div class="icon-box">
-                                        <img src="images/icon-what-we-counter-2.svg" alt="">
-                                    </div>
-                                    <div class="what-we-counter-item-content">
-                                        <h2>50+</h2>
-                                        <p>Skilled Professionals</p>
-                                    </div>
-                                </div>
-                                <!-- What We Counter Item End -->
-
-                                <!-- What We Counter Item Start -->
-                                <div class="what-we-counter-item">
-                                    <div class="icon-box">
-                                        <img src="images/icon-what-we-counter-3.svg" alt="">
-                                    </div>
-                                    <div class="what-we-counter-item-content">
-                                        <h2>100%</h2>
-                                        <p>Quality Assurance</p>
-                                    </div>
-                                </div>
-                                <!-- What We Counter Item End -->
-                            </div>
-                            <!-- What We Counters List End -->
-                        </div>
-                        <!-- What We Do Content End -->
-                    </div>
-                    <!-- What We Do Box End -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- How It Work Section Start(H1) -->
+    <!-- 9. How It Work Section Start(H1) -->
     <div class="how-it-work bg-section">
         <div class="container">
             <div class="row section-row">
@@ -790,8 +728,245 @@
         </div>
     </div>
 
+    <!-- 10. PROOF, NOT PROMISES -->
+    <!-- What We Do Section -->
+    <div class="what-we-do bg-section dark-section">
+        <div class="container-fluid">
+            <div class="row no-gutters">
+                <div class="col-lg-12">
+                    <!-- What We Do Box -->
+                    <div class="what-we-do-box">
+                        <!-- What We Do Image -->
+                        <div class="what-we-do-image">
+                            <figure class="image-anime">
+                                <img src="images/what-we-do-image.jpg" alt="">
+                            </figure>
+                        </div>
+
+                        <!-- What We Do Content -->
+                        <div class="what-we-do-content">
+                            <!-- Section Title -->
+                            <div class="section-title">
+                                <h3 class="wow fadeInUp">Trust & Quality</h3>
+                                <h2 class="text-anime-style-3" data-cursor="-opaque">PROOF, Not Promises</h2>
+                                <p class="wow fadeInUp" data-wow-delay="0.2s">Chosen for quality. Trusted for
+                                    consistency and integrity in everything we make.</p>
+                            </div>
+
+                            <!-- What We Body -->
+                            <div class="what-we-body wow fadeInUp" data-wow-delay="0.4s">
+                                <!-- What We Body Item -->
+                                <div class="what-we-body-item">
+                                    <div class="what-we-body-item-content">
+                                        <h3>Sample-to-Bulk quality consistency</h3>
+                                    </div>
+                                </div>
+
+                                <!-- What We Body Item -->
+                                <div class="what-we-body-item">
+                                    <div class="what-we-body-item-content">
+                                        <h3>Trusted partner factories</h3>
+                                    </div>
+                                </div>
+                                <!-- What We Body Item -->
+                                <div class="what-we-body-item">
+                                    <div class="what-we-body-item-content">
+                                        <h3>Ethical and responsible production</h3>
+                                    </div>
+                                </div>
+                                <!-- What We Body Item -->
+                                <div class="what-we-body-item">
+                                    <div class="what-we-body-item-content">
+                                        <h3>Clear communication at every step</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- What We Body End -->
+
+                            <!-- What We Counters List Start -->
+                            <div class="what-we-counters-list wow fadeInUp">
+                                <!-- What We Counter Item Start -->
+                                <div class="what-we-counter-item">
+                                    <div class="icon-box">
+                                        <img src="images/icon-what-we-counter-1.svg" alt="">
+                                    </div>
+                                    <div class="what-we-counter-item-content">
+                                        <h2>5+</h2>
+                                        <p>Years Of Excellence</p>
+                                    </div>
+                                </div>
+                                <!-- What We Counter Item End -->
+
+                                <!-- What We Counter Item Start -->
+                                <div class="what-we-counter-item">
+                                    <div class="icon-box">
+                                        <img src="images/icon-what-we-counter-2.svg" alt="">
+                                    </div>
+                                    <div class="what-we-counter-item-content">
+                                        <h2>50+</h2>
+                                        <p>Skilled Professionals</p>
+                                    </div>
+                                </div>
+                                <!-- What We Counter Item End -->
+
+                                <!-- What We Counter Item Start -->
+                                <div class="what-we-counter-item">
+                                    <div class="icon-box">
+                                        <img src="images/icon-what-we-counter-3.svg" alt="">
+                                    </div>
+                                    <div class="what-we-counter-item-content">
+                                        <h2>100%</h2>
+                                        <p>Quality Assurance</p>
+                                    </div>
+                                </div>
+                                <!-- What We Counter Item End -->
+                            </div>
+                            <!-- What We Counters List End -->
+                        </div>
+                        <!-- What We Do Content End -->
+                    </div>
+                    <!-- What We Do Box End -->
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
-    <div id="footer"></div>
+    <footer class="main-footer-stone bg-section dark-section">
+        <!-- Footer Header -->
+        <div class="footer-header-stone">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- Footer Header Box -->
+                        <div class="footer-header-box-stone">
+                            <!-- Section Title -->
+                            <div class="section-title">
+                                <h2 class="text-anime-style-3" data-cursor="-opaque">We help brands and organizations
+                                    produce quality apparel — starting small and growing with confidence.</h2>
+                            </div>
+
+                            <!-- Contact Us Circle -->
+                            <div class="contact-us-circle">
+                                <a href="contact.html">
+                                    <img src="images/contact-us-circle.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4">
+                    <!-- About Footer -->
+                    <div class="about-footer-stone">
+                        <!-- Footer Logo -->
+                        <div class="footer-logo-stone">
+                            <img src="images/footer-logo.svg" alt="">
+                        </div>
+
+                        <!-- About Footer Content -->
+                        <div class="about-footer-content-stone">
+                            <p>Low MOQ Production, Sample-First Process, Ethical Manufacturing<br><br>Made in
+                                Bangladesh. Built for growing brands.</p>
+                        </div>
+
+                        <!-- Footer Social Link -->
+                        <div class="footer-social-links-stone">
+                            <ul>
+                                <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-8">
+                    <!-- Footer Links Box -->
+                    <div class="footer-links-box-stone">
+                        <!-- Footer Links -->
+                        <div class="footer-links-stone">
+                            <h3>Services & Company</h3>
+                            <ul>
+                                <li><a href="brand_services_index.html">Brand Services</a></li>
+                                <li><a href="corporate_sales_index.html">Corporate Sales</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="how_it_works.html">How It Works</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-links-stone">
+                            <h3>Support</h3>
+                            <ul>
+                                <li><a href="faq.html">FAQs</a></li>
+                                <li><a href="inquiry.html">Start with a Sample</a></li>
+                                <li><a href="corporate_inquiry.html">Talk to Corporate Sales</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Footer Links -->
+                        <div class="footer-links-stone footer-contact-links-stone">
+                            <h3>Get in Touch</h3>
+                            <!-- Footer Contact Item -->
+                            <div class="footer-contact-item-stone">
+                                <div class="icon-box">
+                                    <img src="images/icon-phone-accent.svg" alt="">
+                                </div>
+                                <div class="footer-contact-content-stone">
+                                    <p><a href="tel:+123456789">+123 456 789</a></p>
+                                </div>
+                            </div>
+
+                            <!-- Footer Contact Item -->
+                            <div class="footer-contact-item-stone">
+                                <div class="icon-box">
+                                    <img src="images/icon-mail-accent.svg" alt="">
+                                </div>
+                                <div class="footer-contact-content-stone">
+                                    <p><a href="mailto:domain@gmail.com">domain@gmail.com</a></p>
+                                </div>
+                            </div>
+
+                            <!-- Footer Contact Item -->
+                            <div class="footer-contact-item-stone">
+                                <div class="icon-box">
+                                    <img src="images/icon-location-accent.svg" alt="">
+                                </div>
+                                <div class="footer-contact-content-stone">
+                                    <p>2464 Royal Ln. Mesa, New Jersey</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <!-- Footer Copyright -->
+                    <div class="footer-copyright-stone">
+                        <!-- Footer Copyright Text -->
+                        <div class="footer-copyright-text-stone">
+                            <p>Copyright © 2025 All Rights Reserved.</p>
+                        </div>
+
+                        <!-- Footer Menu -->
+                        <div class="footer-privacy-policy-stone">
+                            <ul>
+                                <li><a href="privacy_policy.html">Privacy Policy </a></li>
+                                <li><a href="help.html">Help</a></li>
+                                <li><a href="terms_conditions.html">Term’s & Condition </a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Jquery Library File -->
     <script src="js/jquery-3.7.1.min.js"></script>
@@ -811,13 +986,6 @@
     <script src="js/jquery.mb.YTPlayer.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/function.js"></script>
-    <script>
-        // Load header from header.html
-        $(document).ready(function () {
-            $('#header').load('header.html');
-            $('#footer').load('footer.html');
-        });
-    </script>
 </body>
 
 </html>
