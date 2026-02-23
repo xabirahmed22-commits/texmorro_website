@@ -178,11 +178,30 @@
                         </div>
 
                         <!-- Why Choose Item List Start -->
-                        <div class="why-choose-item-list-stone row wow fadeInUp" data-wow-delay="0.6s">
-                            <p style="color: #0B2B3F; font-style: italic; margin-bottom: 15px; font-size: 20px;">The problem wasn't talent.</p>
-                            <p style="color: #0B2B3F; font-style: italic; margin-bottom: 15px; font-size: 20px;">It wasn't demand.</p>
-                            <p style="color: #0B2B3F; font-style: italic; margin-bottom: 15px; font-size: 20px;">It was the system.</p>
-                            <p style="color: #0B2B3F; font-style: italic; font-size: 20px;"><strong>So we built a new one.</strong></p>
+                        <div class="why-choose-item-list-stone wow fadeInUp" data-wow-delay="0.6s">
+                            <!-- Why Choose Item Start -->
+                            <div class="why-choose-item-stone">
+                                <div class="why-choose-brand-logo">
+                                    <img src="images/company-brand-logo-1-stone.svg" alt="">
+                                </div>
+                                <div class="why-choose-item-content-stone">
+                                    
+                                    <p>The problem wasn’t talent.<br> It wasn't demand.</p>
+                                    <h3 style="font-size: 1.5rem; padding: 1rem;">It was the system.</h3>
+                                </div>
+                            </div>
+                            <!-- Why Choose Item End -->
+
+                            <!-- Why Choose Item Start -->
+                            <div class="why-choose-item-stone">
+                                <div class="why-choose-brand-logo">
+                                    <img src="images/company-brand-logo-2-stone.svg" alt="">
+                                </div>
+                                <div class="why-choose-item-content-stone">
+                                    <h3>So we built a new one.</h3>
+                                </div>
+                            </div>
+                            <!-- Why Choose Item End -->
                         </div>
                         <!-- Why Choose Item List End -->
                     </div>
