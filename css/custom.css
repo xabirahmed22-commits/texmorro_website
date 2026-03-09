@@ -43,6 +43,7 @@
 35. Home - Version 2 css
 36. Home - Version 3 css
 
+benefits-item-list-stone
 service-solution-item-list
 
 -------------------------------------------------------------------------------------- */
@@ -10744,6 +10745,7 @@ header.main-header.header-stone .header-sticky.active{
 	flex-wrap: wrap;
 	gap: 30px;
 	margin-top: 230px;
+	align-items: stretch;
 }
 
 .benefits-item-stone{
