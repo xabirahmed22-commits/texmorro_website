@@ -43,7 +43,7 @@
 35. Home - Version 2 css
 36. Home - Version 3 css
 
-service-key-point-list
+feature-item-content
 -------------------------------------------------------------------------------------- */
 
 /************************************/
@@ -52,8 +52,8 @@ service-key-point-list
 
 :root {
 	--primary-color: #0b2b3f;
-	--secondary-color: #fafafa;
-	--bg-color: #fcf5e5;
+	--secondary-color: #ffffff;
+	--bg-color: #f4f6f8;
 	--text-color: #555555;
 	--action-color: #bcca25;
 	--accent-color: #fbe87e;
@@ -516,6 +516,7 @@ a:focus {
 	font-weight: 500;
 	font-size: 14px;
 }
+
 
 /************************************/
 /**** 	   03. Header css		 ****/
@@ -1207,14 +1208,15 @@ header.main-header .header-sticky.active {
 }
 
 .about-us-list ul li::before {
-	content: "\f058";
+	content: "";
 	position: absolute;
-	font-family: "Font Awesome 7 Free";
-	font-size: 18px;
-	font-weight: 900;
-	color: var(--accent-color);
-	top: 0;
 	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: var(--accent-color);
 }
 
 .about-us-body-counter {
@@ -1789,14 +1791,15 @@ header.main-header .header-sticky.active {
 }
 
 .why-choose-us-body ul li::before {
-	content: "\f058";
+	content: "";
 	position: absolute;
-	font-family: "Font Awesome 7 Free";
-	font-size: 18px;
-	font-weight: 900;
-	color: var(--accent-color);
-	top: 14px;
-	left: 14px;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: var(--accent-color);
 }
 
 .why-choose-item-list {
@@ -2166,7 +2169,7 @@ header.main-header .header-sticky.active {
 .how-it-work-item {
 	position: relative;
 	background-color: var(--bg-color);
-	border-radius: 10px;
+	border-radius: 15px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -2934,14 +2937,15 @@ header.main-header .header-sticky.active {
 }
 
 .pricing-item-list ul li:before {
-	content: "\f058";
+	content: "";
 	position: absolute;
-	font-family: "Font Awesome 7 Free";
-	font-size: 18px;
-	font-weight: 900;
-	color: var(--accent-color);
-	top: 0;
 	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: var(--accent-color);
 }
 
 .pricing-item-btn {
@@ -4562,14 +4566,15 @@ header.main-header .header-sticky.active {
 }
 
 .service-entry ul li::before {
-	content: "\f058";
+	content: "";
 	position: absolute;
-	font-family: "Font Awesome 7 Free";
-	font-size: 16px;
-	font-weight: 900;
-	color: var(--accent-color);
-	top: 1px;
 	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: var(--accent-color);
 }
 
 .service-features-box,
@@ -5358,14 +5363,15 @@ header.main-header .header-sticky.active {
 }
 
 .project-info-item::before {
-	content: "\f058";
+	content: "";
 	position: absolute;
-	font-family: "Font Awesome 7 Free";
-	font-size: 18px;
-	font-weight: 900;
-	color: var(--accent-color);
-	top: 5px;
 	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: var(--accent-color);
 }
 
 .project-info-item h3 {
@@ -6056,6 +6062,7 @@ header.main-header .header-sticky.active {
 	.bg-section {
 		width: calc(100% - 40px);
 	}
+
 }
 
 @media only screen and (max-width: 1440px) {
@@ -6170,6 +6177,7 @@ header.main-header .header-sticky.active {
 	.service-solution-item {
 		width: calc(33.33% - 20px);
 	}
+
 
 	.service-solution-item::before {
 		right: -15px;
@@ -9155,14 +9163,15 @@ header.main-header.header-metal .header-sticky.active {
 }
 
 .intro-video-list-metal ul li::before {
-	content: "\f058";
+	content: "";
 	position: absolute;
-	font-family: "Font Awesome 7 Free";
-	font-size: 16px;
-	font-weight: 900;
-	color: var(--accent-color);
-	top: 0;
 	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: var(--accent-color);
 }
 
 .our-pricing-metal {
@@ -9242,13 +9251,15 @@ header.main-header.header-metal .header-sticky.active {
 }
 
 .pricing-item-list-metal ul li:before {
-	content: "\f058";
+	content: "";
 	position: absolute;
-	font-family: "Font Awesome 7 Free";
-	font-size: 18px;
-	font-weight: 900;
-	color: var(--accent-color);
-	left: 0px;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: var(--accent-color);
 }
 
 .pricing-item-btn-metal {
@@ -11381,13 +11392,15 @@ header.main-header.header-stone .header-sticky.active {
 }
 
 .pricing-item-list-stone ul li:before {
-	content: "\f058";
+	content: "";
 	position: absolute;
-	font-family: "Font Awesome 7 Free";
-	font-size: 18px;
-	font-weight: 900;
-	color: var(--accent-color);
-	left: 0px;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: var(--accent-color);
 }
 
 .pricing-item-btn-stone {
@@ -12286,6 +12299,35 @@ header.main-header.header-stone .header-sticky.active {
 .why-choose-us-metal.dark-section .why-choose-item-metal .icon:hover::before {
     background-color: var(--primary-color);
 }
+
+.step3-solutions .service-solution-item {
+    width: 100%;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 30px;
+    border: 1px solid var(--divider-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step3-solutions .service-solution-item:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 4px 24px rgba(11, 43, 63, 0.08);
+}
+
+.step3-solutions .service-solution-item::before {
+    display: none;
+}
+
+.frosted-card {
+	background: var(--dark-divider-color);
+    backdrop-filter: blur(10px) saturate(100%);
+    -webkit-backdrop-filter: blur(1px) saturate(100%);
+    border-radius: 10px;
+    padding: 40px;
+    transition: background-color 0.3s ease;
+	
+}
+
 
 
 @media (max-width: 768px) {
