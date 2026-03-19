@@ -43,7 +43,11 @@
 35. Home - Version 2 css
 36. Home - Version 3 css
 
+<<<<<<< HEAD
 service-item-content-stone
+=======
+service-item-stone
+>>>>>>> 92da00cad6df74bfe0b381fc59f2132bf84c8295
 -------------------------------------------------------------------------------------- */
 
 /************************************/
@@ -12327,6 +12331,7 @@ header.main-header.header-stone .header-sticky.active {
     transition: background-color 0.3s ease;
 	
 }
+
 
 
 
