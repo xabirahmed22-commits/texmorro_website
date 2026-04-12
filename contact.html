@@ -160,7 +160,7 @@
                                 <div class="icon-box"><img src="images/icon-mail-primary.svg" alt=""></div>
                                 <div class="contact-info-item-content">
                                     <h3>Email Us</h3>
-                                    <p><a href="mailto:info@texmorro.com">info@texmorro.com</a></p>
+                                    <p><a href="/cdn-cgi/l/email-protection#97fef9f1f8d7e3f2effaf8e5e5f8b9f4f8fa"><span class="__cf_email__" data-cfemail="ddb4b3bbb29da9b8a5b0b2afafb2f3beb2b0">[email&#160;protected]</span></a></p>
                                 </div>
                             </div>
                             <div class="contact-info-item" style="width: 100%;">
@@ -264,18 +264,27 @@
 
                             <button class="cxp-back-btn" onclick="goBack()">← Change Path</button>
 
-                            <form id="brandForm" class="contact-form cxp-form wow fadeInUp" data-wow-delay="0.2s">
+                            <form id="brandForm" class="contact-form cxp-form wow fadeInUp" data-wow-delay="0.2s" novalidate>
+                                <!-- Honeypot — hidden from real users, bots fill it -->
+                                <div style="display:none;" aria-hidden="true">
+                                    <input type="text" name="website" tabindex="-1" autocomplete="off">
+                                </div>
+                                <input type="hidden" name="form_type" value="brand">
+
                                 <fieldset>
                                     <legend>Basic Information</legend>
                                     <div class="row">
                                         <div class="form-group col-md-6 mb-4">
-                                            <input type="text" class="form-control" placeholder="Full Name *" required>
+                                            <input type="text" name="name" class="form-control" placeholder="Full Name *" required autocomplete="name">
+                                            <div class="help-block with-errors"></div>
                                         </div>
                                         <div class="form-group col-md-6 mb-4">
-                                            <input type="email" class="form-control" placeholder="Email Address *" required>
+                                            <input type="email" name="email" class="form-control" placeholder="Email Address *" required autocomplete="email">
+                                            <div class="help-block with-errors"></div>
                                         </div>
                                         <div class="form-group col-md-12 mb-4">
-                                            <input type="tel" class="form-control" placeholder="Phone / WhatsApp *" required>
+                                            <input type="tel" name="phone" class="form-control" placeholder="Phone / WhatsApp *" required autocomplete="tel">
+                                            <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
                                 </fieldset>
@@ -284,10 +293,10 @@
                                     <legend>Brand Details</legend>
                                     <div class="row">
                                         <div class="form-group col-md-6 mb-4">
-                                            <input type="text" class="form-control" placeholder="Brand Name">
+                                            <input type="text" name="brand_name" class="form-control" placeholder="Brand Name">
                                         </div>
                                         <div class="form-group col-md-6 mb-4">
-                                            <input type="text" class="form-control" placeholder="Location (City / Country)">
+                                            <input type="text" name="location" class="form-control" placeholder="Location (City / Country)">
                                         </div>
                                         <div class="form-group col-md-12 mb-4">
                                             <label class="cxp-label">Are you launching or scaling?</label>
@@ -307,23 +316,23 @@
                                     <legend>Product Details</legend>
                                     <div class="row">
                                         <div class="form-group col-md-12 mb-4">
-                                            <input type="text" class="form-control" placeholder="What do you want to produce? (e.g. T-shirts, hoodies, co-ords)">
+                                            <input type="text" name="products" class="form-control" placeholder="What do you want to produce? (e.g. T-shirts, hoodies, co-ords)">
                                         </div>
                                         <div class="form-group col-md-6 mb-4">
-                                            <select class="form-control">
+                                            <select name="quantity" class="form-control">
                                                 <option value="" disabled selected>Estimated Quantity</option>
-                                                <option>50–100 pieces</option>
-                                                <option>100–300 pieces</option>
-                                                <option>300–500 pieces</option>
-                                                <option>500+ pieces</option>
+                                                <option value="50–100 pieces">50–100 pieces</option>
+                                                <option value="100–300 pieces">100–300 pieces</option>
+                                                <option value="300–500 pieces">300–500 pieces</option>
+                                                <option value="500+ pieces">500+ pieces</option>
                                             </select>
                                         </div>
                                         <div class="form-group col-md-6 mb-4">
-                                            <select class="form-control">
+                                            <select name="prod_stage" class="form-control">
                                                 <option value="" disabled selected>Production Stage</option>
-                                                <option>Just an idea</option>
-                                                <option>Need sampling</option>
-                                                <option>Ready for production</option>
+                                                <option value="Just an idea">Just an idea</option>
+                                                <option value="Need sampling">Need sampling</option>
+                                                <option value="Ready for production">Ready for production</option>
                                             </select>
                                         </div>
                                         <div class="form-group col-md-12 mb-4">
@@ -344,17 +353,18 @@
                                     <legend>Additional Information</legend>
                                     <div class="row">
                                         <div class="form-group col-md-12 mb-4">
-                                            <textarea class="form-control" rows="4" placeholder="Any specific requirements or questions..."></textarea>
-                                        </div>
-                                        <div class="form-group col-md-12 mb-4">
-                                            <label class="cxp-label">Upload design / reference (optional)</label>
-                                            <input type="file" class="form-control cxp-file-input" accept=".jpg,.jpeg,.png,.pdf,.ai,.eps">
+                                            <textarea name="notes" class="form-control" rows="4" placeholder="Any specific requirements or questions..."></textarea>
                                         </div>
                                     </div>
                                 </fieldset>
 
+                                <div class="cxp-form-error" id="brandFormError" style="display:none;"></div>
+
                                 <div class="contact-form-btn">
-                                    <button type="submit" class="btn-default btn-highlighted">Start with a Sample</button>
+                                    <button type="submit" class="btn-default btn-highlighted" id="brandSubmitBtn">
+                                        <span class="btn-text">Start with a Sample</span>
+                                        <span class="btn-loading" style="display:none;">Sending...</span>
+                                    </button>
                                 </div>
                             </form>
                         </div>
@@ -369,21 +379,31 @@
 
                             <button class="cxp-back-btn" onclick="goBack()">← Change Path</button>
 
-                            <form id="corporateForm" class="contact-form cxp-form wow fadeInUp" data-wow-delay="0.2s">
+                            <form id="corporateForm" class="contact-form cxp-form wow fadeInUp" data-wow-delay="0.2s" novalidate>
+                                <!-- Honeypot -->
+                                <div style="display:none;" aria-hidden="true">
+                                    <input type="text" name="website" tabindex="-1" autocomplete="off">
+                                </div>
+                                <input type="hidden" name="form_type" value="corporate">
+
                                 <fieldset>
                                     <legend>Basic Information</legend>
                                     <div class="row">
                                         <div class="form-group col-md-6 mb-4">
-                                            <input type="text" class="form-control" placeholder="Full Name *" required>
+                                            <input type="text" name="name" class="form-control" placeholder="Full Name *" required autocomplete="name">
+                                            <div class="help-block with-errors"></div>
                                         </div>
                                         <div class="form-group col-md-6 mb-4">
-                                            <input type="text" class="form-control" placeholder="Company / Organization Name *" required>
+                                            <input type="text" name="company" class="form-control" placeholder="Company / Organization Name *" required>
+                                            <div class="help-block with-errors"></div>
                                         </div>
                                         <div class="form-group col-md-6 mb-4">
-                                            <input type="email" class="form-control" placeholder="Email Address *" required>
+                                            <input type="email" name="email" class="form-control" placeholder="Email Address *" required autocomplete="email">
+                                            <div class="help-block with-errors"></div>
                                         </div>
                                         <div class="form-group col-md-6 mb-4">
-                                            <input type="tel" class="form-control" placeholder="Phone / WhatsApp *" required>
+                                            <input type="tel" name="phone" class="form-control" placeholder="Phone / WhatsApp *" required autocomplete="tel">
+                                            <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
                                 </fieldset>
@@ -392,31 +412,31 @@
                                     <legend>Order Details</legend>
                                     <div class="row">
                                         <div class="form-group col-md-12 mb-4">
-                                            <input type="text" class="form-control" placeholder="What do you need? (e.g. uniforms, T-shirts, merchandise)">
+                                            <input type="text" name="requirements" class="form-control" placeholder="What do you need? (e.g. uniforms, T-shirts, merchandise)">
                                         </div>
                                         <div class="form-group col-md-6 mb-4">
-                                            <select class="form-control">
+                                            <select name="quantity" class="form-control">
                                                 <option value="" disabled selected>Estimated Quantity</option>
-                                                <option>100–500 pieces</option>
-                                                <option>500–1000 pieces</option>
-                                                <option>1000–3000 pieces</option>
-                                                <option>3000+ pieces</option>
+                                                <option value="100–500 pieces">100–500 pieces</option>
+                                                <option value="500–1000 pieces">500–1000 pieces</option>
+                                                <option value="1000–3000 pieces">1000–3000 pieces</option>
+                                                <option value="3000+ pieces">3000+ pieces</option>
                                             </select>
                                         </div>
                                         <div class="form-group col-md-6 mb-4">
-                                            <input type="text" class="form-control" placeholder="Required Timeline (e.g. 4–6 weeks)">
+                                            <input type="text" name="timeline" class="form-control" placeholder="Required Timeline (e.g. 4–6 weeks)">
                                         </div>
                                         <div class="form-group col-md-12 mb-4">
                                             <label class="cxp-label">Product Type</label>
                                             <div class="cxp-radio-group">
                                                 <label class="cxp-radio-item">
-                                                    <input type="radio" name="product_type" value="apparel"> Apparel
+                                                    <input type="radio" name="product_type" value="Apparel"> Apparel
                                                 </label>
                                                 <label class="cxp-radio-item">
-                                                    <input type="radio" name="product_type" value="merchandise"> Merchandise
+                                                    <input type="radio" name="product_type" value="Merchandise"> Merchandise
                                                 </label>
                                                 <label class="cxp-radio-item">
-                                                    <input type="radio" name="product_type" value="both"> Both
+                                                    <input type="radio" name="product_type" value="Both"> Both
                                                 </label>
                                             </div>
                                         </div>
@@ -424,13 +444,13 @@
                                             <label class="cxp-label">Branding Requirements</label>
                                             <div class="cxp-radio-group">
                                                 <label class="cxp-radio-item">
-                                                    <input type="checkbox" name="branding" value="logo_print"> Logo Printing
+                                                    <input type="checkbox" name="branding[]" value="Logo Printing"> Logo Printing
                                                 </label>
                                                 <label class="cxp-radio-item">
-                                                    <input type="checkbox" name="branding" value="embroidery"> Embroidery
+                                                    <input type="checkbox" name="branding[]" value="Embroidery"> Embroidery
                                                 </label>
                                                 <label class="cxp-radio-item">
-                                                    <input type="checkbox" name="branding" value="packaging"> Packaging
+                                                    <input type="checkbox" name="branding[]" value="Packaging"> Packaging
                                                 </label>
                                             </div>
                                         </div>
@@ -441,17 +461,18 @@
                                     <legend>Additional Information</legend>
                                     <div class="row">
                                         <div class="form-group col-md-12 mb-4">
-                                            <textarea class="form-control" rows="4" placeholder="Any specific requirements or instructions..."></textarea>
-                                        </div>
-                                        <div class="form-group col-md-12 mb-4">
-                                            <label class="cxp-label">Upload logo / reference (optional)</label>
-                                            <input type="file" class="form-control cxp-file-input" accept=".jpg,.jpeg,.png,.pdf,.ai,.eps,.svg">
+                                            <textarea name="notes" class="form-control" rows="4" placeholder="Any specific requirements or instructions..."></textarea>
                                         </div>
                                     </div>
                                 </fieldset>
 
+                                <div class="cxp-form-error" id="corporateFormError" style="display:none;"></div>
+
                                 <div class="contact-form-btn">
-                                    <button type="submit" class="btn-default btn-highlighted">Request Corporate Quote</button>
+                                    <button type="submit" class="btn-default btn-highlighted" id="corporateSubmitBtn">
+                                        <span class="btn-text">Request Corporate Quote</span>
+                                        <span class="btn-loading" style="display:none;">Sending...</span>
+                                    </button>
                                 </div>
                             </form>
                         </div>
@@ -675,7 +696,7 @@
                             <h3>Get in Touch</h3>
                             <div class="footer-contact-item-stone">
                                 <div class="icon-box"><img src="images/icon-mail-accent.svg" alt=""></div>
-                                <div class="footer-contact-content-stone"><p><a href="mailto:info@texmorro.com">info@texmorro.com</a></p></div>
+                                <div class="footer-contact-content-stone"><p><a href="/cdn-cgi/l/email-protection#8ae3e4ece5cafeeff2e7e5f8f8e5a4e9e5e7"><span class="__cf_email__" data-cfemail="355c5b535a7541504d585a47475a1b565a58">[email&#160;protected]</span></a></p></div>
                             </div>
                             <div class="footer-contact-item-stone">
                                 <div class="icon-box"><img src="images/icon-phone-accent.svg" alt=""></div>
@@ -919,9 +940,20 @@
         from { opacity: 0; transform: translateY(12px); }
         to { opacity: 1; transform: translateY(0); }
     }
+
+    /* Error message */
+    .cxp-form-error {
+        background: #fef2f2;
+        border: 1px solid #fecaca;
+        border-radius: 8px;
+        padding: 12px 16px;
+        color: #dc2626;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
     </style>
 
-    <script src="js/jquery-3.7.1.min.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/validator.min.js"></script>
     <script src="js/jquery.slicknav.js"></script>
@@ -958,84 +990,141 @@
         document.querySelector('.page-contact-us').scrollIntoView({ behavior: 'smooth' });
     }
 
-    // Brand form — WhatsApp submit
+    // Brand form — Ajax email + WhatsApp redirect
     document.getElementById('brandForm').addEventListener('submit', function(e) {
         e.preventDefault();
         const f = this;
-        const name     = f.querySelector('[placeholder="Full Name *"]').value.trim();
-        const email    = f.querySelector('[placeholder="Email Address *"]').value.trim();
-        const phone    = f.querySelector('[placeholder="Phone / WhatsApp *"]').value.trim();
-        const brand    = f.querySelector('[placeholder="Brand Name"]').value.trim();
-        const location = f.querySelector('[placeholder="Location (City / Country)"]').value.trim();
-        const stageType = f.querySelector('input[name="brand_stage_type"]:checked');
-        const product  = f.querySelector('[placeholder*="produce"]').value.trim();
-        const qty      = f.querySelector('select:nth-of-type(1)').value;
-        const stage    = f.querySelector('select:nth-of-type(2)').value;
-        const hasDesign = f.querySelector('input[name="has_design"]:checked');
-        const notes    = f.querySelector('textarea').value.trim();
 
-        const msg = [
-            '👕 *Brand Production Enquiry — TEXMORRO*',
-            '',
+        if (!f.checkValidity()) { f.reportValidity(); return; }
+
+        const name      = f.elements['name'].value.trim();
+        const email     = f.elements['email'].value.trim();
+        const phone     = f.elements['phone'].value.trim();
+        const brand     = f.elements['brand_name'].value.trim();
+        const location  = f.elements['location'].value.trim();
+        const stageEl   = f.querySelector('input[name="brand_stage_type"]:checked');
+        const products  = f.elements['products'].value.trim();
+        const quantity  = f.elements['quantity'].value;
+        const prodStage = f.elements['prod_stage'].value;
+        const designEl  = f.querySelector('input[name="has_design"]:checked');
+        const notes     = f.elements['notes'].value.trim();
+
+        const btn = document.getElementById('brandSubmitBtn');
+        btn.querySelector('.btn-text').style.display = 'none';
+        btn.querySelector('.btn-loading').style.display = 'inline';
+        btn.disabled = true;
+        document.getElementById('brandFormError').style.display = 'none';
+
+        const waMsg = [
+            '👕 *Brand Production Enquiry — TEXMORRO*', '',
             `*Name:* ${name}`,
-            email    ? `*Email:* ${email}`    : '',
-            phone    ? `*Phone:* ${phone}`    : '',
-            brand    ? `*Brand:* ${brand}`    : '',
-            location ? `*Location:* ${location}` : '',
-            stageType ? `*Brand Stage:* ${stageType.value === 'new' ? 'New Brand' : 'Existing Brand'}` : '',
+            email     ? `*Email:* ${email}`    : '',
+            phone     ? `*Phone:* ${phone}`    : '',
+            brand     ? `*Brand:* ${brand}`    : '',
+            location  ? `*Location:* ${location}` : '',
+            stageEl   ? `*Brand Stage:* ${stageEl.value === 'new' ? 'New Brand' : 'Existing Brand'}` : '',
             '',
-            product  ? `*Products:* ${product}` : '',
-            qty      ? `*Quantity:* ${qty}`   : '',
-            stage    ? `*Production Stage:* ${stage}` : '',
-            hasDesign ? `*Has Design:* ${hasDesign.value === 'yes' ? 'Yes' : 'No'}` : '',
-            notes    ? `*Notes:* ${notes}`    : '',
+            products  ? `*Products:* ${products}`  : '',
+            quantity  ? `*Quantity:* ${quantity}`  : '',
+            prodStage ? `*Stage:* ${prodStage}`    : '',
+            designEl  ? `*Has Design:* ${designEl.value === 'yes' ? 'Yes' : 'No'}` : '',
+            notes     ? `*Notes:* ${notes}`        : '',
         ].filter(Boolean).join('\n');
 
-        window.open('https://wa.me/8801715043027?text=' + encodeURIComponent(msg), '_blank');
+        const data = new FormData(f);
 
-        document.getElementById('cxp-step-brand').style.display = 'none';
-        document.getElementById('cxp-step-success').style.display = 'block';
-        document.querySelector('.contact-us-form').scrollIntoView({ behavior: 'smooth' });
+        fetch('contact-process.php', { method: 'POST', body: data })
+            .then(r => r.json())
+            .then(res => {
+                if (res.success) {
+                    window.open('https://wa.me/8801715043027?text=' + encodeURIComponent(waMsg), '_blank');
+                    document.getElementById('cxp-step-brand').style.display = 'none';
+                    document.getElementById('cxp-step-success').style.display = 'block';
+                    document.querySelector('.contact-us-form').scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    showFormError('brandFormError', res.message || 'Something went wrong. Please try again.');
+                }
+            })
+            .catch(() => {
+                showFormError('brandFormError', 'Connection error. Please try again or contact us on WhatsApp.');
+            })
+            .finally(() => {
+                btn.querySelector('.btn-text').style.display = 'inline';
+                btn.querySelector('.btn-loading').style.display = 'none';
+                btn.disabled = false;
+            });
     });
 
-    // Corporate form — WhatsApp submit
+    // Corporate form — Ajax email + WhatsApp redirect
     document.getElementById('corporateForm').addEventListener('submit', function(e) {
         e.preventDefault();
         const f = this;
-        const name     = f.querySelector('[placeholder="Full Name *"]').value.trim();
-        const company  = f.querySelector('[placeholder="Company / Organization Name *"]').value.trim();
-        const email    = f.querySelector('[placeholder="Email Address *"]').value.trim();
-        const phone    = f.querySelector('[placeholder="Phone / WhatsApp *"]').value.trim();
-        const product  = f.querySelector('[placeholder*="need"]').value.trim();
-        const qty      = f.querySelector('select').value;
-        const timeline = f.querySelector('[placeholder*="Timeline"]').value.trim();
-        const prodType = f.querySelector('input[name="product_type"]:checked');
-        const branding = Array.from(f.querySelectorAll('input[name="branding"]:checked')).map(i => i.value.replace('_', ' ')).join(', ');
-        const notes    = f.querySelector('textarea').value.trim();
 
-        const msg = [
-            '🏢 *Corporate / Bulk Order Enquiry — TEXMORRO*',
-            '',
+        if (!f.checkValidity()) { f.reportValidity(); return; }
+
+        const name         = f.elements['name'].value.trim();
+        const company      = f.elements['company'].value.trim();
+        const email        = f.elements['email'].value.trim();
+        const phone        = f.elements['phone'].value.trim();
+        const requirements = f.elements['requirements'].value.trim();
+        const quantity     = f.elements['quantity'].value;
+        const timeline     = f.elements['timeline'].value.trim();
+        const prodTypeEl   = f.querySelector('input[name="product_type"]:checked');
+        const brandingVals = Array.from(f.querySelectorAll('input[name="branding[]"]:checked')).map(i => i.value).join(', ');
+        const notes        = f.elements['notes'].value.trim();
+
+        const btn = document.getElementById('corporateSubmitBtn');
+        btn.querySelector('.btn-text').style.display = 'none';
+        btn.querySelector('.btn-loading').style.display = 'inline';
+        btn.disabled = true;
+        document.getElementById('corporateFormError').style.display = 'none';
+
+        const waMsg = [
+            '🏢 *Corporate / Bulk Order Enquiry — TEXMORRO*', '',
             `*Name:* ${name}`,
-            company  ? `*Company:* ${company}`  : '',
-            email    ? `*Email:* ${email}`       : '',
-            phone    ? `*Phone:* ${phone}`       : '',
+            company      ? `*Company:* ${company}`           : '',
+            email        ? `*Email:* ${email}`               : '',
+            phone        ? `*Phone:* ${phone}`               : '',
             '',
-            product  ? `*Requirements:* ${product}` : '',
-            qty      ? `*Quantity:* ${qty}`      : '',
-            timeline ? `*Timeline:* ${timeline}` : '',
-            prodType ? `*Product Type:* ${prodType.value}` : '',
-            branding ? `*Branding:* ${branding}` : '',
-            notes    ? `*Notes:* ${notes}`       : '',
+            requirements ? `*Requirements:* ${requirements}` : '',
+            quantity     ? `*Quantity:* ${quantity}`         : '',
+            timeline     ? `*Timeline:* ${timeline}`         : '',
+            prodTypeEl   ? `*Product Type:* ${prodTypeEl.value}` : '',
+            brandingVals ? `*Branding:* ${brandingVals}`     : '',
+            notes        ? `*Notes:* ${notes}`               : '',
         ].filter(Boolean).join('\n');
 
-        window.open('https://wa.me/8801715043027?text=' + encodeURIComponent(msg), '_blank');
+        const data = new FormData(f);
+        data.set('branding', brandingVals);
 
-        document.getElementById('cxp-step-corporate').style.display = 'none';
-        document.getElementById('cxp-step-success').style.display = 'block';
-        document.querySelector('.contact-us-form').scrollIntoView({ behavior: 'smooth' });
+        fetch('contact-process.php', { method: 'POST', body: data })
+            .then(r => r.json())
+            .then(res => {
+                if (res.success) {
+                    window.open('https://wa.me/8801715043027?text=' + encodeURIComponent(waMsg), '_blank');
+                    document.getElementById('cxp-step-corporate').style.display = 'none';
+                    document.getElementById('cxp-step-success').style.display = 'block';
+                    document.querySelector('.contact-us-form').scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    showFormError('corporateFormError', res.message || 'Something went wrong. Please try again.');
+                }
+            })
+            .catch(() => {
+                showFormError('corporateFormError', 'Connection error. Please try again or contact us on WhatsApp.');
+            })
+            .finally(() => {
+                btn.querySelector('.btn-text').style.display = 'inline';
+                btn.querySelector('.btn-loading').style.display = 'none';
+                btn.disabled = false;
+            });
     });
 
+    function showFormError(id, msg) {
+        const el = document.getElementById(id);
+        el.textContent = msg;
+        el.style.display = 'block';
+        el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
 
     window.addEventListener('load', function() {
         var preloader = document.querySelector('.preloader');
@@ -1043,5 +1132,4 @@
     });
     </script>
 </body>
-
 </html>
