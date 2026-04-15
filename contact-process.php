@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 $type = clean($_POST['form_type'] ?? '');
-if (!in_array($type, ['brand', 'corporate'], true)) {
+if (!in_array($type, ['brand', 'corporate', 'sample'], true)) {
     respond(false, 'Unknown form type.');
 }
 
@@ -95,7 +95,23 @@ if ($type === 'brand') {
     $rows .= field('Production Stage', $prod_stage);
     $rows .= field('Has Design',       $has_design === 'yes' ? 'Yes' : ($has_design === 'no' ? 'No' : ''));
     $rows .= field('Notes',            $notes);
+} elseif ($type === 'sample') {
+    $product     = clean($_POST['product']     ?? '');
+    $fabric      = clean($_POST['fabric']      ?? '');
+    $sample_qty  = clean($_POST['sample_qty']  ?? '');
+    $has_design  = clean($_POST['has_design']  ?? '');
+    $notes       = clean($_POST['notes']       ?? '');
 
+    $subject     = '🧵 Sample Request: ' . ($product ?: $name) . ' — TEXMORRO';
+
+    $rows .= field('Name',       $name);
+    $rows .= field('Email',      $email);
+    $rows .= field('Phone',      $phone);
+    $rows .= field('Product',    $product);
+    $rows .= field('Fabric',     $fabric);
+    $rows .= field('Samples',    $sample_qty);
+    $rows .= field('Has Design', $has_design === 'yes' ? 'Yes' : ($has_design === 'no' ? 'No – needs guidance' : ''));
+    $rows .= field('Notes',      $notes);
 } else {
     $company     = clean($_POST['company']       ?? '');
     $requirements = clean($_POST['requirements'] ?? '');
